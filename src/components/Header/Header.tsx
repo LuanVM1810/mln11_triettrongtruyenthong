@@ -23,9 +23,9 @@ const Header = () => {
         />
 
         <div
-          className={`fixed w-[85%] md:w-[50%] lg:hidden ${
-            openMobileMenu === true ? `translate-x-0` : `translate-x-[100%]`
-          }  top-0 right-0 bottom-0 bg-white
+          className={`fixed w-[70%] md:w-[50%] ${
+            openMobileMenu === true ? "translate-x-0" : "translate-x-[100%]"
+          } lg:hidden  top-0 right-0 bottom-0 bg-white
           transition-all duration-700 z-10 pl-8 pr-4 py-4 `}
         >
           <IoCloseOutline
