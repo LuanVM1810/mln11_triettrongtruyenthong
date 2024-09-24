@@ -22,17 +22,17 @@ const Header = ({ location }: Props) => {
 
   console.log(openMobileMenu);
   return (
-    <nav className="font-vietnam fixed w-full z-10 text-triethoc-black">
+    <nav className="font-vietnam fixed w-full z-10 text-black">
       <div className="text-[24px] flex items-center w-full px-4 py-4 lg:px-8 lg:py-6 lg:text-[30px]">
         <FaTwitter size={24} />
         <IoMenu
           onClick={onClickOpenMobileMenu}
-          className="ml-auto lg:hidden text-triethoc-green"
+          className="ml-auto lg:hidden text-black"
           size={"24px"}
         />
 
         <div
-          className={`fixed w-[80%] md:w-[50%] ${
+          className={`fixed w-[100%] md:w-[50%] ${
             openMobileMenu === true
               ? "translate-x-0 shadow-2xl"
               : "translate-x-[100%]"
@@ -44,6 +44,40 @@ const Header = ({ location }: Props) => {
             size={"24px"}
             className="ml-auto"
           />
+          <div className="mt-[30px]">
+            <ul className="flex flex-col gap-[20px] text-14 items-center">
+              <NavLink to="/">
+                <li
+                  className={`${
+                    location.pathname === "/" && `bg-[#D9D9D9]`
+                  } px-6 py-2 rounded-3xl hover:opacity-80`}
+                >
+                  Về chúng tôi
+                </li>
+              </NavLink>
+              <li
+                className={`${
+                  location.pathname === "/3" && `bg-[#D9D9D9]`
+                } px-6 py-2 rounded-3xl`}
+              >
+                Bản tin triết
+              </li>
+              <li
+                className={`${
+                  location.pathname === "/1" && `bg-[#D9D9D9]`
+                } px-6 py-2 rounded-3xl`}
+              >
+                Bạn học triết
+              </li>
+              <li
+                className={`${
+                  location.pathname === "/2" && `bg-[#D9D9D9]`
+                } px-6 py-2 rounded-3xl`}
+              >
+                Từ điển
+              </li>
+            </ul>
+          </div>
         </div>
         <div className="hidden text-[14px] lg:block lg:ml-auto text-triethoc-black">
           <ul className="lg:flex lg:gap-[50px] items-center">
