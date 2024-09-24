@@ -27,6 +27,9 @@ export default {
         36: "36px",
         48: "48px",
       },
+      boxShadow: {
+        search: "rgba(0, 0, 0, 0.35) 0px 5px 15px;"
+      }
     },
   },
   plugins: [],

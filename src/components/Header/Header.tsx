@@ -25,13 +25,13 @@ const Header = ({ location }: Props) => {
     <nav className="font-vietnam fixed w-full z-10 text-black">
       <div className="text-[24px] flex items-center w-full px-4 py-4 lg:px-8 lg:py-6 lg:text-[30px]">
         <FaTwitter size={24} />
-        <div className="mx-3 lg:hidden p-1 overflow-hidden w-[30px] h-[30px] hover:w-[270px] text-black hover:shadow-md rounded-full flex group items-center hover:duration-300 duration-300">
+        <div className="mx-3 lg:hidden p-1 overflow-hidden w-[30px] h-[30px] hover:w-[75%] text-black hover:shadow-search rounded-full flex group items-center hover:duration-300 duration-300">
           <div className="flex items-center justify-center">
             <IoIosSearch size={24} />
           </div>
           <input
             type="text"
-            className="outline-none text-[14px] bg-transparent w-full text-black font-normal px-4"
+            className="outline-none text-[14px] bg-transparent w-full text-black font-normal pl-2"
           />
         </div>
 
@@ -90,7 +90,7 @@ const Header = ({ location }: Props) => {
           </div>
         </div>
         <div className="hidden text-[14px] lg:block lg:ml-auto text-triethoc-black">
-          <ul className="lg:flex lg:gap-[50px] items-center">
+          <ul className="lg:flex lg:gap-[30px] items-center">
             <NavLink to="/">
               <li
                 className={`${
@@ -121,8 +121,16 @@ const Header = ({ location }: Props) => {
             >
               Từ điển
             </li>
-            <li className="ml-16">
-              <IoIosSearch size={24} />
+            <li className="ml-10">
+              <div className="mx-3 p-1 overflow-hidden w-[30px] h-[30px] hover:w-[200px] text-black hover:shadow-search rounded-full flex group items-center hover:duration-300 duration-300">
+                <div className="flex items-center justify-center">
+                  <IoIosSearch size={24} />
+                </div>
+                <input
+                  type="text"
+                  className="outline-none text-[14px] bg-transparent w-full text-black font-normal pl-2"
+                />
+              </div>
             </li>
           </ul>
         </div>
