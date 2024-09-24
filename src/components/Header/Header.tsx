@@ -1,7 +1,15 @@
 import { useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { IoCloseOutline } from "react-icons/io5";
-const Header = () => {
+import { IoIosSearch } from "react-icons/io";
+import { Location, NavLink } from "react-router-dom";
+import { FaTwitter } from "react-icons/fa6";
+
+type Props = {
+  location: Location;
+};
+
+const Header = ({ location }: Props) => {
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
   const onClickOpenMobileMenu = () => {
@@ -11,11 +19,12 @@ const Header = () => {
   const onClickCloseMobileMenu = () => {
     setOpenMobileMenu(false);
   };
+
   console.log(openMobileMenu);
   return (
-    <nav className="fixed w-full">
-      <div className="bg-triethoc-brown text-[24px] flex items-center w-full px-4 py-4 lg:px-6 lg:text-[30px]">
-        <div className="text-triethoc-green">Triết trong truyền thông</div>
+    <nav className="font-vietnam fixed w-full z-10 text-triethoc-black">
+      <div className="text-[24px] flex items-center w-full px-4 py-4 lg:px-8 lg:py-6 lg:text-[30px]">
+        <FaTwitter size={24} />
         <IoMenu
           onClick={onClickOpenMobileMenu}
           className="ml-auto lg:hidden text-triethoc-green"
@@ -23,10 +32,12 @@ const Header = () => {
         />
 
         <div
-          className={`fixed w-[70%] md:w-[50%] ${
-            openMobileMenu === true ? "translate-x-0" : "translate-x-[100%]"
+          className={`fixed w-[80%] md:w-[50%] ${
+            openMobileMenu === true
+              ? "translate-x-0 shadow-2xl"
+              : "translate-x-[100%]"
           } lg:hidden  top-0 right-0 bottom-0 bg-white
-          transition-all duration-700 z-10 pl-8 pr-4 py-4 `}
+          transition-all duration-700 z-10 pl-8 pr-4 py-4`}
         >
           <IoCloseOutline
             onClick={onClickCloseMobileMenu}
@@ -34,11 +45,41 @@ const Header = () => {
             className="ml-auto"
           />
         </div>
-        <div className="hidden lg:block lg:ml-auto text-triethoc-green">
-          <ul className="lg:flex lg:gap-[70px] items-center ">
-            <li>Trang chủ</li>
-            <li>Về chúng tôi</li>
-            <li className="ml-16">Tìm hiểu thêm</li>
+        <div className="hidden text-[14px] lg:block lg:ml-auto text-triethoc-black">
+          <ul className="lg:flex lg:gap-[50px] items-center">
+            <NavLink to="/">
+              <li
+                className={`${
+                  location.pathname === "/" && `bg-[#D9D9D9]`
+                } px-6 py-2 rounded-3xl hover:opacity-80`}
+              >
+                Về chúng tôi
+              </li>
+            </NavLink>
+            <li
+              className={`${
+                location.pathname === "/3" && `bg-[#D9D9D9]`
+              } px-6 py-2 rounded-3xl`}
+            >
+              Bản tin triết
+            </li>
+            <li
+              className={`${
+                location.pathname === "/1" && `bg-[#D9D9D9]`
+              } px-6 py-2 rounded-3xl`}
+            >
+              Bạn học triết
+            </li>
+            <li
+              className={`${
+                location.pathname === "/2" && `bg-[#D9D9D9]`
+              } px-6 py-2 rounded-3xl`}
+            >
+              Từ điển
+            </li>
+            <li className="ml-16">
+              <IoIosSearch size={24} />
+            </li>
           </ul>
         </div>
       </div>

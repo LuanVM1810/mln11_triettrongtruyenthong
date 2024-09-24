@@ -1,11 +1,12 @@
-import Header from "./components/Header/Header";
-import Slogan from "./components/Slogan/Slogan";
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
 
 export default function App() {
   return (
-    <div className="font-harmoni font-bold">
-      <Header />
-      <Slogan />
+    <div className="min-h-screen ">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
     </div>
   );
 }
