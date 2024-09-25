@@ -3,7 +3,7 @@ import Img1 from "../../assets/AVATA MLN.jpg";
 
 const Slogan = () => {
   return (
-    <div className="min-h-screen grid grid-cols-1 lg:grid-cols-3  lg:space-x-5 px-4 py-20 lg:pl-[200px] lg:py-20">
+    <div className="min-h-screen grid grid-cols-1 lg:grid-cols-3 lg:space-x-5 px-4 py-20 lg:pl-[200px] lg:py-20">
       <div>
         <img src={Img1} className="lg:w-[70%]" />
         <p className="mt-[30px] lg:mt-[50px]">

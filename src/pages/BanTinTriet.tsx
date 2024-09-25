@@ -1,19 +1,19 @@
 import { useLocation } from "react-router-dom";
+import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 import Header from "../components/Header/Header";
 import SideBar from "../components/SideBar/SideBar";
-import Slogan from "../components/Slogan/Slogan";
-import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
+import News from "../components/News/News";
 
-const HomePage = () => {
+const BanTinTriet = () => {
   const location = useLocation();
   return (
     <div className="text-14 font-vietnam">
       <ScrollToTop />
       <Header location={location} />
       <SideBar location={location} />
-      <Slogan />
+      <News />
     </div>
   );
 };
 
-export default HomePage;
+export default BanTinTriet;

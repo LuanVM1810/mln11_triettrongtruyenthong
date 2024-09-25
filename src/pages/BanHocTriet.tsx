@@ -1,19 +1,19 @@
 import { useLocation } from "react-router-dom";
 import Header from "../components/Header/Header";
 import SideBar from "../components/SideBar/SideBar";
-import Slogan from "../components/Slogan/Slogan";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
+import Background from "../components/News/Background";
 
-const HomePage = () => {
+const BanHocTriet = () => {
   const location = useLocation();
   return (
     <div className="text-14 font-vietnam">
       <ScrollToTop />
       <Header location={location} />
       <SideBar location={location} />
-      <Slogan />
+      <Background />
     </div>
   );
 };
 
-export default HomePage;
+export default BanHocTriet;
