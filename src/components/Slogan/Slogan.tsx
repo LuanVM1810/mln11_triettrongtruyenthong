@@ -1,14 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import Img from "../../assets/01.png";
-import Img1 from "../../assets/AVATA MLN.jpg";
+import Img1 from "../../assets/TYPO.png";
 
 const Slogan = () => {
   const navigate = useNavigate();
   return (
-    <div className="min-h-screen grid grid-cols-1 lg:grid-cols-3 lg:space-x-5 px-4 pt-20 lg:pl-[200px] lg:pt-32">
-      <div>
-        <img src={Img1} className="lg:w-[70%]" />
-        <p className="mt-[30px] lg:mt-[50px]">
+    <div className="h-screen grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-3 lg:space-x-5 px-4 pt-20 lg:pl-[200px]">
+      <div className="lg:col-span-2 lg:row-start-1">
+        <img src={Img1} className="lg:w-[65%]" />
+        <p className="">
           <span className="font-bold">“Triết học trong Truyền thông”</span> giúp
           bạn bước vào hành trình khám phá mối liên hệ đầy bất ngờ này. Bên cạnh
           đó còn mang những bài kiểm tra đơn giản giúp bạn ghi nhớ kiến thức
@@ -27,7 +27,7 @@ const Slogan = () => {
           </button>
         </div>
       </div>
-      <div className="col-span-2">
+      <div className="lg:col-span-2 lg:row-span-2">
         <img src={Img} alt="" />
       </div>
     </div>

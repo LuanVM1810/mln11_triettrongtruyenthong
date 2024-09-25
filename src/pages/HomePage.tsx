@@ -7,7 +7,7 @@ import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
 const HomePage = () => {
   const location = useLocation();
   return (
-    <div className="text-14 font-vietnam">
+    <div className="text-14 h-screen font-vietnam">
       <ScrollToTop />
       <Header location={location} />
       <SideBar location={location} />

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { BiChevronLeft, BiChevronRight } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 
 interface Slides {
   id: number;
@@ -17,6 +18,7 @@ export default function Carousel({
   autoSlide,
   autoSlideInterval,
 }: Props) {
+  const navigate = useNavigate();
   const [curr, setCurr] = useState(0);
 
   const prev = () =>
@@ -37,17 +39,20 @@ export default function Carousel({
       >
         {slides.map((s) => (
           <>
-            <div className="relative inset-0">
+            <div className="relative inset-0 md:hidden">
               <button className="absolute w-32 shadow-md lg:text-20 bg-black/40 text-white rounded-md">
                 Bản tin 0{s.id}
               </button>
             </div>
-            <div className="relative"></div>
-            <img className="rounded-3xl" src={s.url}></img>
+            <img
+              className="rounded-3xl"
+              src={s.url}
+              alt={`Bản tin 0${s.id}`}
+            ></img>
           </>
         ))}
       </div>
-      <div className="absolute inset-0 flex items-center justify-between p-4">
+      <div className="absolute inset-0 flex items-center justify-between px-4">
         <button
           onClick={prev}
           className="p-1 rounded-full shadow bg-black/80 text-white/80 hover:bg-gray-500"
@@ -63,14 +68,18 @@ export default function Carousel({
       </div>
 
       <div className="absolute bottom-4 right-0 left-0">
-        <div className="flex items-center justify-center gap-2">
+        <div className="flex items-center justify-center gap-4">
           {slides.map((_, i) => (
             <div
+              onClick={() => navigate(`${_.id}`)}
+              key={_.id}
               className={`
-              transition-all duration-500 w-3 h-3 bg-black rounded-full
-              ${curr === i ? "p-2" : "bg-opacity-50"}
+              transition-all cursor-pointer duration-500 w-20 lg:w-28 h-5 text-center text-white bg-black rounded-lg
+              ${curr === i ? "scale-125" : "bg-opacity-50"}
             `}
-            />
+            >
+              Bản tin 0{_.id}
+            </div>
           ))}
         </div>
       </div>

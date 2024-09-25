@@ -3,7 +3,7 @@ import { IoMenu } from "react-icons/io5";
 import { IoCloseOutline } from "react-icons/io5";
 import { IoIosSearch } from "react-icons/io";
 import { Location, NavLink } from "react-router-dom";
-import { FaTwitter } from "react-icons/fa6";
+import Logo from "../../assets/logo đen_bộ nhận diện wooden.png";
 
 type Props = {
   location: Location;
@@ -20,11 +20,10 @@ const Header = ({ location }: Props) => {
     setOpenMobileMenu(false);
   };
 
-  console.log(openMobileMenu);
   return (
     <nav className="font-vietnam fixed w-full z-10 text-black">
       <div className="text-[24px] flex items-center w-full px-4 py-4 lg:px-8 lg:py-6 lg:text-[30px]">
-        <FaTwitter size={24} />
+        <img src={Logo} width={32} className="lg:hidden" />
         <div className="mx-3 lg:hidden p-1 overflow-hidden w-[30px] h-[30px] hover:w-[75%] text-black hover:shadow-search rounded-full flex group items-center hover:duration-300 duration-300">
           <div className="flex items-center justify-center">
             <IoIosSearch size={24} />

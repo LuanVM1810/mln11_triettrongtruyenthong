@@ -21,12 +21,12 @@ const slides = [
 
 const News = () => {
   return (
-    <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 md:space-y-0 md:space-x-10 px-4 py-20 lg:pl-[150px] lg:py-24">
+    <div className="h-screen grid grid-cols-1 md:grid-cols-2 px-4 lg:pl-[100px] pt-5">
       <div className="md:col-span-1">
         <img src={BanTinTriet} alt="" />
       </div>
       <div className="md:col-start-2">
-        <Carousel autoSlide={true} autoSlideInterval={2500} slides={slides} />
+        <Carousel autoSlide={true} autoSlideInterval={2000} slides={slides} />
       </div>
     </div>
   );

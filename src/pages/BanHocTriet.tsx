@@ -7,7 +7,7 @@ import Background from "../components/News/Background";
 const BanHocTriet = () => {
   const location = useLocation();
   return (
-    <div className="text-14 font-vietnam">
+    <div className="max-h-screen text-14 font-vietnam">
       <ScrollToTop />
       <Header location={location} />
       <SideBar location={location} />
