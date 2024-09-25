@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import Img from "../../assets/01.png";
 import Img1 from "../../assets/AVATA MLN.jpg";
 
 const Slogan = () => {
+  const navigate = useNavigate();
   return (
-    <div className="min-h-screen grid grid-cols-1 lg:grid-cols-3 lg:space-x-5 px-4 py-20 lg:pl-[200px] lg:py-20">
+    <div className="min-h-screen grid grid-cols-1 lg:grid-cols-3 lg:space-x-5 px-4 pt-20 lg:pl-[200px] lg:pt-32">
       <div>
         <img src={Img1} className="lg:w-[70%]" />
         <p className="mt-[30px] lg:mt-[50px]">
@@ -15,7 +17,12 @@ const Slogan = () => {
           thông điệp truyền thông ngày nay.
         </p>
         <div className="flex justify-center">
-          <button className="w-full lg:w-[50%] px-6 py-2 mt-[30px] text-white rounded-3xl lg:mt-[50px] bg-[#546D68] text-center">
+          <button
+            onClick={() => {
+              navigate("/ban-tin-triet");
+            }}
+            className="w-full lg:w-[50%] px-6 py-2 mt-[30px] text-white rounded-3xl lg:mt-[50px] bg-[#546D68] text-center"
+          >
             Khám phá triết
           </button>
         </div>
