@@ -1,9 +1,9 @@
-import DoveImage from "../../assets/Dove.png";
+import DoveImage from "../../assets/Dove.jfif";
 const BanTinSo2 = () => {
   return (
     <div className="h-screen grid grid-cols-1 space-y-5 lg:space-y-0 lg:grid-cols-2 lg:grid-rows-2 px-4 py-28 lg:pl-[100px]">
       <div className="lg:col-span-2 space-y-5 lg:pl-[300px] lg:pr-[150px]">
-        <div className="text-36 font-harmoni">
+        <div className="text-[40px] text-[#E1AE52] font-harmoni">
           Mỗi quan hệ qua lại và phụ thuộc lẫn nhau
         </div>
         <div>
@@ -22,7 +22,7 @@ const BanTinSo2 = () => {
       <div className="flex justify-center pt-[80px]">
         <img src={DoveImage} alt="" />
       </div>
-      <div className="bg-[#35544E] text-white px-8 py-10 rounded-[20px] lg:mr-[150px]">
+      <div className="bg-[#35544E] text-white px-8 py-10 rounded-[20px] shadow-search lg:mr-[150px]">
         <span className="font-bold">Ví dụ: </span>
         Một ví dụ thực tế về mối quan hệ phụ thuộc và tương tác lẫn nhau giữa
         truyền thông và xã hội là chiến dịch "Real Beauty" của Dove. Ban đầu,

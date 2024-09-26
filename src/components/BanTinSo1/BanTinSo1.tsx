@@ -2,12 +2,12 @@ import BanTinSo1Image from "../../assets/87e09fc8-78d5-42d4-8496-6c7dba6d5143.jf
 import RadioImage from "../../assets/Black Simple Newspaper Birthday Poster (6) 1.png";
 const BanTinSo1 = () => {
   return (
-    <div className="h-screen grid grid-cols-1 lg:grid-cols-2  px-4 pt-20 lg:pl-[120px]">
+    <div className="h-screen grid grid-cols-1 lg:grid-cols-2  px-4 pt-16 lg:pl-[120px]">
       <div>
         <img src={BanTinSo1Image} alt="" />
       </div>
       <div className="space-y-5 lg:pr-[70px]">
-        <div className="font-harmoni uppercase text-36 text-center my-6">
+        <div className="font-harmoni uppercase text-[#E1AE52] text-[40px] text-center my-6">
           Sự thay đổi về lượng dẫn đến sự thay đổi về chất trong truyền thông
         </div>
         <div>
