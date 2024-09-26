@@ -29,7 +29,7 @@ export default {
       },
       boxShadow: {
         search: "rgba(0, 0, 0, 0.35) 0px 5px 15px;",
-        btn: "4px 4px 4px 0 #000000;"
+        btn: "4px 4px 4px 0px rgba(0, 0, 0, 0.35);"
       }
     },
   },

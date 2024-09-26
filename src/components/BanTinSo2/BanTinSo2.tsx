@@ -1,13 +1,31 @@
 import DoveImage from "../../assets/Dove.jfif";
 import ChangeLocation from "../ChangeLocation/ChangeLocation";
+import { motion } from "framer-motion";
 const BanTinSo2 = () => {
   return (
     <div className="h-screen grid grid-cols-1 space-y-5 lg:space-y-0 lg:grid-cols-2 lg:grid-rows-2 px-4 py-20 lg:pl-[100px]">
       <div className="lg:col-span-2 space-y-5 lg:pl-[300px] lg:pr-[150px]">
-        <div className="text-[40px] text-[#E1AE52] font-harmoni">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 2,
+            delay: 0.5,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+          className="text-[40px] text-[#E1AE52] font-harmoni"
+        >
           Mỗi quan hệ qua lại và phụ thuộc lẫn nhau
-        </div>
-        <div>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 2,
+            delay: 0.6,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+        >
           <span className="font-bold">Liên tưởng thực tế:</span> Sự phụ thuộc và
           tương tác giữa các yếu tố là không thể tránh khỏi. Ví dụ, khi ra mắt
           một sản phẩm dưỡng da trong bối cảnh phong trào bảo vệ môi trường đang
@@ -18,12 +36,30 @@ const BanTinSo2 = () => {
           nghiệp phải điều chỉnh để đảm bảo tính nhất quán. Qua đó, chiến dịch
           truyền thông và xu hướng xã hội luôn tương tác và phụ thuộc lẫn nhau,
           tạo ra sự phát triển hai chiều.
-        </div>
+        </motion.div>
       </div>
-      <div className="flex justify-center pt-[80px]">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 2,
+          delay: 0.7,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+        className="flex justify-center pt-[80px]"
+      >
         <img src={DoveImage} alt="" />
-      </div>
-      <div className="lg:mr-[150px]">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 2,
+          delay: 0.8,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+        className="lg:mr-[150px]"
+      >
         <p className="bg-[#35544E] text-white px-8 py-10 rounded-[20px] shadow-search">
           <span className="font-bold">Ví dụ: </span>
           Một ví dụ thực tế về mối quan hệ phụ thuộc và tương tác lẫn nhau giữa
@@ -41,7 +77,7 @@ const BanTinSo2 = () => {
           backLeft="/ban-tin-triet/1"
           goRight="/ban-tin-triet/3"
         />
-      </div>
+      </motion.div>
     </div>
   );
 };

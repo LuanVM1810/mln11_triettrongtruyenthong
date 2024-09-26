@@ -12,14 +12,9 @@ const Slogan = () => {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
-            duration: 0.3,
+            duration: 2,
+            delay: 0.5,
             ease: [0, 0.71, 0.2, 1.01],
-            scale: {
-              type: "spring",
-              damping: 5,
-              stiffness: 100,
-              restDelta: 0.001,
-            },
           }}
         >
           <img src={Img1} className="lg:w-[65%]" />
@@ -30,7 +25,7 @@ const Slogan = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{
             duration: 0.8,
-            delay: 0.5,
+            delay: 0.6,
             ease: [0, 0.71, 0.2, 1.01],
           }}
         >
@@ -41,7 +36,16 @@ const Slogan = () => {
           giúp bạn hiểu sâu hơn về cách tư duy triết học được áp dụng vào các
           thông điệp truyền thông ngày nay.
         </motion.div>
-        <div className="flex justify-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 2,
+            delay: 0.7,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+          className="flex justify-center"
+        >
           <button
             onClick={() => {
               navigate("/ban-tin-triet");
@@ -50,20 +54,15 @@ const Slogan = () => {
           >
             Khám phá triết
           </button>
-        </div>
+        </motion.div>
       </div>
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{
-          duration: 0.3,
+          duration: 2,
+          delay: 1,
           ease: [0, 0.71, 0.2, 1.01],
-          scale: {
-            type: "spring",
-            damping: 5,
-            stiffness: 100,
-            restDelta: 0.001,
-          },
         }}
         className="lg:col-span-2 lg:row-span-2"
       >
