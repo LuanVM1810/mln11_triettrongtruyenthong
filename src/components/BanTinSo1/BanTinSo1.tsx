@@ -1,5 +1,5 @@
 import BanTinSo1Image from "../../assets/87e09fc8-78d5-42d4-8496-6c7dba6d5143.jfif";
-import RadioImage from "../../assets/Black Simple Newspaper Birthday Poster (6) 1.png";
+import ChangeLocation from "../ChangeLocation/ChangeLocation";
 const BanTinSo1 = () => {
   return (
     <div className="h-screen grid grid-cols-1 lg:grid-cols-2  px-4 pt-16 lg:pl-[120px]">
@@ -26,7 +26,7 @@ const BanTinSo1 = () => {
           lượng của chiến dịch truyền thông từ đó cũng thay đổi, trở nên linh
           hoạt, cá nhân hóa và mang tính kết nối hơn.
         </div>
-        <img src={RadioImage} />
+        <ChangeLocation backLeft="/ban-tin-triet" goRight="/ban-tin-triet/2" />
       </div>
     </div>
   );

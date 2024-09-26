@@ -28,7 +28,8 @@ export default {
         48: "48px",
       },
       boxShadow: {
-        search: "rgba(0, 0, 0, 0.35) 0px 5px 15px;"
+        search: "rgba(0, 0, 0, 0.35) 0px 5px 15px;",
+        btn: "4px 4px 4px 0 #000000;"
       }
     },
   },
