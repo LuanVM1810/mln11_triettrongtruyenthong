@@ -1,10 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NewsImage from "../../assets/Background trang bạn học triết.png";
 import { data1 } from "../../constants";
 import NenKetQua from "../../assets/nền kết quả_ 1.png";
 import { IoMdHome } from "react-icons/io";
 import { NavLink } from "react-router-dom";
-import { motion } from "framer-motion";
 
 interface Question {
   question: string;
@@ -16,14 +15,18 @@ interface Question {
 
 const Quiz = () => {
   const [index, setIndex] = useState(0);
+  let question: Question | null = data1[index];
   const [chooseAnswer, setChooseAnswer] = useState<number | null>(null);
   const [isCorrect, setIsCorrect] = useState<boolean>();
-  let question: Question | null = data1[index];
   const [lock, setLock] = useState<boolean>(false);
   const [score, setScore] = useState<number>(0);
+  const [percent, setPercent] = useState("0%");
   const [result, setResult] = useState<boolean>(false);
 
-  const percent = (score / data1.length) * 100 + "%";
+  useEffect(() => {
+    const newPercent = (score / data1.length) * 100 + "%";
+    setPercent(newPercent);
+  }, [score]);
 
   const checkAnswer = (ans: number) => {
     if (lock == false) {
@@ -40,17 +43,18 @@ const Quiz = () => {
     }
   };
 
-  const nextQuestion = () => {
+  const nextQuestion = async () => {
     if (index == data1.length - 1) {
       question = null;
-      setResult(true);
-      return 0;
+      await setResult(true);
+      return;
     }
     setIndex(index + 1);
     setChooseAnswer(null);
-    setIsCorrect(false);
+    setIsCorrect(undefined);
     setLock(false);
   };
+  console.log(percent);
 
   return (
     <div className="pt h-screen lg:max-w-full">
@@ -60,16 +64,7 @@ const Quiz = () => {
           backgroundImage: `url(${NewsImage})`,
         }}
       >
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            duration: 2,
-            delay: 0.5,
-            ease: [0, 0.71, 0.2, 1.01],
-          }}
-          className="bg-triethoc-green shadow-btn w-[700px] max-w-[1000px] mx-4 px-4 lg:px-6 py-4 lg:py-6 rounded-[20px]"
-        >
+        <div className="bg-triethoc-green shadow-btn w-[700px] max-w-[1000px] mx-4 px-4 lg:px-6 py-4 lg:py-6 rounded-[20px]">
           {result === true ? (
             <div className="lg:grid lg:grid-cols-2 ">
               <div className="h-[220px] lg:h-full flex items-center justify-center">
@@ -124,9 +119,9 @@ const Quiz = () => {
                     checkAnswer(1);
                   }}
                   className={` ${
-                    chooseAnswer == 1 && isCorrect == true && `bg-[#00d397]`
-                  } ${
-                    chooseAnswer == 1 && isCorrect == false && "bg-[#ff4a4a]"
+                    chooseAnswer == 1 && isCorrect == true && "bg-green-500"
+                  }  ${
+                    chooseAnswer == 1 && isCorrect == false && "bg-[#ff4a4a] "
                   } bg-[#546D68] mb-4 lg:mb-6 p-2 lg:p-4 rounded-[13px] border-2 border-white cursor-pointer`}
                 >
                   a. {question?.option1}
@@ -136,8 +131,8 @@ const Quiz = () => {
                     checkAnswer(2);
                   }}
                   className={` ${
-                    chooseAnswer == 2 && isCorrect == true && `bg-[#00d397]`
-                  } ${
+                    chooseAnswer == 2 && isCorrect == true && "bg-green-500"
+                  }  ${
                     chooseAnswer == 2 && isCorrect == false && "bg-[#ff4a4a]"
                   } bg-[#546D68] mb-4 lg:mb-6 p-2 lg:p-4 rounded-[13px] border-2 border-white cursor-pointer`}
                 >
@@ -148,8 +143,8 @@ const Quiz = () => {
                     checkAnswer(3);
                   }}
                   className={` ${
-                    chooseAnswer == 3 && isCorrect == true && `bg-[#00d397]`
-                  } ${
+                    chooseAnswer == 3 && isCorrect == true && "bg-green-500"
+                  }  ${
                     chooseAnswer == 3 && isCorrect == false && "bg-[#ff4a4a]"
                   } bg-[#546D68] mb-4 lg:mb-6 p-2 lg:p-4 rounded-[13px] border-2 border-white cursor-pointer`}
                 >
@@ -172,7 +167,7 @@ const Quiz = () => {
               </div>
             </>
           )}
-        </motion.div>
+        </div>
       </div>
     </div>
   );
