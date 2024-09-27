@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom";
 import Header from "../components/Header/Header";
 import SideBar from "../components/SideBar/SideBar";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
-import Background from "../components/News/Background";
+import Quiz from "../components/Quiz/Quiz";
 
 const BanHocTriet = () => {
   const location = useLocation();
@@ -11,7 +11,7 @@ const BanHocTriet = () => {
       <ScrollToTop />
       <Header location={location} />
       <SideBar location={location} />
-      <Background />
+      <Quiz />
     </div>
   );
 };
