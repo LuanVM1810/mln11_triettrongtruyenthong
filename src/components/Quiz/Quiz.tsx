@@ -4,6 +4,7 @@ import { data1 } from "../../constants";
 import NenKetQua from "../../assets/nền kết quả_ 1.png";
 import { IoMdHome } from "react-icons/io";
 import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 
 interface Question {
   question: string;
@@ -59,7 +60,16 @@ const Quiz = () => {
           backgroundImage: `url(${NewsImage})`,
         }}
       >
-        <div className="bg-triethoc-green shadow-btn w-[700px] max-w-[1000px] mx-4 px-4 lg:px-6 py-4 lg:py-6 rounded-[20px]">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{
+            duration: 2,
+            delay: 0.5,
+            ease: [0, 0.71, 0.2, 1.01],
+          }}
+          className="bg-triethoc-green shadow-btn w-[700px] max-w-[1000px] mx-4 px-4 lg:px-6 py-4 lg:py-6 rounded-[20px]"
+        >
           {result === true ? (
             <div className="lg:grid lg:grid-cols-2 ">
               <div className="h-[220px] lg:h-full flex items-center justify-center">
@@ -162,7 +172,7 @@ const Quiz = () => {
               </div>
             </>
           )}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
