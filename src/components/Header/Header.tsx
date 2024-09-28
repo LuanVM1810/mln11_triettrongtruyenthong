@@ -82,13 +82,15 @@ const Header = ({ location }: Props) => {
                   Bạn học triết
                 </li>
               </NavLink>
-              <li
-                className={`${
-                  location.pathname === "/2" && `bg-[#D9D9D9]`
-                } px-6 py-2 rounded-3xl`}
-              >
-                Từ điển
-              </li>
+              <NavLink to="/tu-dien">
+                <li
+                  className={`${
+                    location.pathname === "/2" && `bg-[#D9D9D9]`
+                  } px-6 py-2 rounded-3xl`}
+                >
+                  Từ điển
+                </li>
+              </NavLink>
             </ul>
           </div>
         </div>
@@ -121,13 +123,15 @@ const Header = ({ location }: Props) => {
                 Bạn học triết
               </li>
             </NavLink>
-            <li
-              className={`${
-                location.pathname === "/2" && `bg-[#D9D9D9]`
-              } px-6 py-2 rounded-3xl`}
-            >
-              Từ điển
-            </li>
+            <NavLink to="/tu-dien">
+              <li
+                className={`${
+                  location.pathname === "/tu-dien" && `bg-[#D9D9D9]`
+                } px-6 py-2 rounded-3xl`}
+              >
+                Từ điển
+              </li>
+            </NavLink>
             <li className="ml-10">
               <div className="mx-3 p-1 overflow-hidden w-[30px] h-[30px] hover:w-[200px] text-black hover:shadow-search rounded-full flex group items-center hover:duration-300 duration-300">
                 <div className="flex items-center justify-center">

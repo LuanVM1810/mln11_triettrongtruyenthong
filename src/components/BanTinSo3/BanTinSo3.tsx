@@ -1,26 +1,35 @@
+import BanTinSo3Img from "../../assets/ban tin so 3.png";
+import FlipCard from "../FlipCard/FlipCard";
 const BanTinSo3 = () => {
   return (
-    <div className="pt-20 h-screen px-4 lg:pl-[150px]">
-      <div className="flex">
-        <div className=" flex gap-[100px] pl-[450px]">
-          <p className="bg-triethoc-green relative p-4 text-white w-[296px] h-[188px] rounded-[20px]">
-            <span className="text-triethoc-brown">NGẪU NHIÊN:</span> Là những
-            yếu tố xảy ra do sự kết hợp tình cờ, không theo quy luật tất yếu.
-            Ngẫu nhiên không quyết định bản chất nhưng có thể ảnh hưởng đến hình
-            thức biểu hiện của tất nhiên.
-            <div className="ml-[180px] mt-5">
-              <button className="bg-[#F8FAE5] text-black p-2 rounded-[6px]">
-                Xem ví dụ
-              </button>
-            </div>
-          </p>
-          <p className="font-harmoni flex-col w-[350px] h-[144px] text-[40px] uppercase text-triethoc-brown">
-            <div>Cặp phạm trù cơ bản</div>
-            <div className="text-triethoc-green">"Tất nhiên"</div>
-            <div className="text-triethoc-green ml-[70px]">
-              <span className="text-triethoc-brown"> và</span> "Ngẫu nhiên"
-            </div>
-          </p>
+    <div className="pt-20 lg:pt-[100px] lg:overflow-hidden lg:grid lg:grid-cols-2 lg:grid-row-2 h-screen px-4 lg:pr-[200px]  lg:pl-[250px]">
+      <div className="lg:col-span-1">
+        <div className="text-[40px] font-harmoni uppercase text-triethoc-brown">
+          Cặp phạm trù cơ bản
+          <span className="text-triethoc-green"> "tất nhiên" </span>và{" "}
+          <span className="text-triethoc-green">"ngẫu nhiên"</span>
+        </div>
+        <img src={BanTinSo3Img} alt="" />
+      </div>
+      <div className="lg:col-start-2">
+        <div>
+          <FlipCard
+            key={1}
+            frontHeading="Ngẫu nhiên"
+            frontDescription=" Là những yếu tố xảy ra do sự kết hợp tình cờ, không theo quy luật tất yếu. Ngẫu nhiên không quyết định bản chất nhưng có thể ảnh hưởng đến hình thức biểu hiện của tất nhiên."
+            backHeading="Ví dụ"
+            backDescription="Khi tổ chức một buổi ra mắt sản phẩm mới, việc lên kế hoạch chi tiết về thời gian, nội dung phát biểu, âm thanh, ánh sáng, và bố trí không gian là điều tất nhiên phải làm. Không có kế hoạch chu đáo, sự kiện dễ dàng rơi vào hỗn loạn."
+          />
+        </div>
+        <div>
+          <FlipCard
+            key={2}
+            frontHeading="Tất nhiên"
+            frontDescription="Là những yếu tố hoặc hiện tượng xuất hiện do các quy luật tất yếu của hiện thực, không thể tránh khỏi khi có đủ điều kiện. Nó quyết định xu hướng và bản chất của sự vật.
+"
+            backHeading="Ví dụ"
+            backDescription="Trong buổi ra mắt sản phẩm, có thể một khách mời VIP hoặc Host không đến kịp giờ do vấn đề giao thông, đây là yếu tố ngẫu nhiên. Nếu không chuẩn bị phương án dự phòng cho trường hợp này, chương trình có thể bị trễ và gây ra những ảnh hưởng tiêu cực cho sự kiện."
+          />
         </div>
       </div>
     </div>

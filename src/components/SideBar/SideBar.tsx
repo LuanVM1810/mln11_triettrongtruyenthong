@@ -37,7 +37,14 @@ const SideBar = ({ location }: Props) => {
               } p-1 border-4 border-[#595858] h-2 w-2 text-black bg-black rounded-full `}
             ></div>
           </NavLink>
-          <div className="p-1 border-4 border-[#595858] text-black bg-black rounded-full"></div>
+          <NavLink to="/tu-dien">
+            <div
+              className={`${
+                location.pathname === "/tu-dien" &&
+                `outline outline-offset-4 outline-[#595858]`
+              } p-1 border-4 border-[#595858] h-2 w-2 text-black bg-black rounded-full `}
+            ></div>
+          </NavLink>
         </div>
       </div>
     </div>

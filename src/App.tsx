@@ -7,6 +7,7 @@ import News from "./components/News/News";
 import BanTinSo1 from "./components/BanTinSo1/BanTinSo1";
 import BanTinSo2 from "./components/BanTinSo2/BanTinSo2";
 import BanTinSo3 from "./components/BanTinSo3/BanTinSo3";
+import TudienPage from "./pages/TudienPage";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="3" element={<BanTinSo3 />} />
         </Route>
         <Route path="ban-hoc-triet" element={<BanHocTriet />} />
+        <Route path="tu-dien" element={<TudienPage />} />
       </Routes>
     </div>
   );

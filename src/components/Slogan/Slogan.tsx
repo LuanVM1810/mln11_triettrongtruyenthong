@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import Img from "../../assets/01.png";
-import Img1 from "../../assets/TYPO.png";
+import Img1 from "../../assets/typo k nen.png";
 import { motion } from "framer-motion";
 
 const Slogan = () => {
   const navigate = useNavigate();
   return (
-    <div className="h-screen grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-3 lg:space-x-5 px-4 pt-20 lg:pl-[200px]">
+    <div className="h-screen grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-3 lg:space-x-5 px-4 pt-10 lg:pt-20 lg:pl-[200px]">
       <div className="lg:col-span-2 lg:row-start-1">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -16,6 +16,7 @@ const Slogan = () => {
             delay: 0.5,
             ease: [0, 0.71, 0.2, 1.01],
           }}
+          className="flex justify-center"
         >
           <img src={Img1} className="lg:w-[65%]" />
         </motion.div>

@@ -46,7 +46,7 @@ const BanTinSo2 = () => {
           delay: 0.7,
           ease: [0, 0.71, 0.2, 1.01],
         }}
-        className="flex justify-center pt-[80px]"
+        className="flex justify-center"
       >
         <img src={DoveImage} alt="" />
       </motion.div>

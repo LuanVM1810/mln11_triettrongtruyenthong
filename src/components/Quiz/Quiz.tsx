@@ -84,13 +84,13 @@ const Quiz = () => {
                 </div>
                 <div className="w-[100%] relative h-[13px] bg-triethoc-white mt-5 rounded-[20px]">
                   <div
-                    className={`w-[${percent}] absolute bg-triethoc-brown h-[13px] rounded-[20px]`}
+                    className={`w-[${percent}] z-2 absolute bg-triethoc-brown h-[13px] rounded-[20px]`}
                   ></div>
                 </div>
                 <div className="mt-5 text-white">
-                  Những cá nhân hướng ngoại sẵn sàng tận hưởng các hoạt động
-                  nhóm và coi trọng việc tương tác xã hội. Họ có xu hướng nhiệt
-                  tình, hướng ngoại và thể hiện sự hào hứng của mình.
+                  Chúc mừng bạn đã vượt qua 8 câu hỏi trắc nghiệm về triết học!
+                  Một con số khá ấn tượng! Hy vọng bạn tìm thấy nhiều điều thú
+                  vị trong quá trình tìm hiểu. Cứ tiếp tục khám phá nhé!
                 </div>
 
                 <div className="flex justify-end mt-5">
