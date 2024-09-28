@@ -1,4 +1,5 @@
 import BanTinSo3Img from "../../assets/ban tin so 3.png";
+import ChangeLocation from "../ChangeLocation/ChangeLocation";
 import FlipCard from "../FlipCard/FlipCard";
 const BanTinSo3 = () => {
   return (
@@ -31,6 +32,7 @@ const BanTinSo3 = () => {
             backDescription="Trong buổi ra mắt sản phẩm, có thể một khách mời VIP hoặc Host không đến kịp giờ do vấn đề giao thông, đây là yếu tố ngẫu nhiên. Nếu không chuẩn bị phương án dự phòng cho trường hợp này, chương trình có thể bị trễ và gây ra những ảnh hưởng tiêu cực cho sự kiện."
           />
         </div>
+        <ChangeLocation backLeft="/ban-tin-triet/2" goRight="/" />
       </div>
     </div>
   );
