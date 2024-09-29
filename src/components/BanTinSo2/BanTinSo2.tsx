@@ -3,7 +3,7 @@ import ChangeLocation from "../ChangeLocation/ChangeLocation";
 import { motion } from "framer-motion";
 const BanTinSo2 = () => {
   return (
-    <div className="h-screen grid grid-cols-1 space-y-5 lg:space-y-0 lg:grid-cols-2 lg:grid-rows-2 px-4 py-20 lg:pl-[100px]">
+    <div className="h-screen grid overflow-x-hidden grid-cols-1 space-y-5 lg:space-y-0 lg:grid-cols-2 lg:grid-rows-2 px-4 py-20 lg:pl-[100px]">
       <div className="lg:col-span-2 space-y-5 lg:pl-[300px] lg:pr-[150px]">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -51,13 +51,9 @@ const BanTinSo2 = () => {
         <img src={DoveImage} alt="" />
       </motion.div>
       <motion.div
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{
-          duration: 2,
-          delay: 0.8,
-          ease: [0, 0.71, 0.2, 1.01],
-        }}
+        initial={{ x: 1500 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 2 }}
         className="lg:mr-[150px]"
       >
         <p className="bg-[#35544E] text-white px-8 py-10 rounded-[20px] shadow-search">

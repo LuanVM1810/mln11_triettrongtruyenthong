@@ -1,8 +1,7 @@
-import { useLocation } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Header from "../components/Header/Header";
 import SideBar from "../components/SideBar/SideBar";
 import ScrollToTop from "../components/ScrollToTop/ScrollToTop";
-import Tudien from "../components/Tudien/Tudien";
 
 const TudienPage = () => {
   const location = useLocation();
@@ -11,7 +10,7 @@ const TudienPage = () => {
       <ScrollToTop />
       <Header location={location} />
       <SideBar location={location} />
-      <Tudien />
+      <Outlet />
     </div>
   );
 };

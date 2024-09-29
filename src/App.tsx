@@ -8,6 +8,8 @@ import BanTinSo1 from "./components/BanTinSo1/BanTinSo1";
 import BanTinSo2 from "./components/BanTinSo2/BanTinSo2";
 import BanTinSo3 from "./components/BanTinSo3/BanTinSo3";
 import TudienPage from "./pages/TudienPage";
+import Tudien from "./components/Tudien/Tudien";
+import TuDienTruyenThong from "./components/TuDienTruyenThong/TuDienTruyenThong";
 
 export default function App() {
   return (
@@ -21,7 +23,10 @@ export default function App() {
           <Route path="3" element={<BanTinSo3 />} />
         </Route>
         <Route path="ban-hoc-triet" element={<BanHocTriet />} />
-        <Route path="tu-dien" element={<TudienPage />} />
+        <Route path="tu-dien" element={<TudienPage />}>
+          <Route index element={<Tudien />} />
+          <Route path="truyenthong" element={<TuDienTruyenThong />} />
+        </Route>
       </Routes>
     </div>
   );

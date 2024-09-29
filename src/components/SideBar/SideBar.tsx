@@ -7,7 +7,7 @@ type Props = {
 
 const SideBar = ({ location }: Props) => {
   return (
-    <div className="hidden lg:block -z-1 bg-transparent border-r-2 border-[#595858/50] fixed h-screen w-[50px] lg:w-[100px] left-0 top-0 bottom-0">
+    <div className="hidden lg:block z-10 bg-transparent border-r-2 border-[#595858/50] fixed h-screen w-[50px] lg:w-[100px] left-0 top-0 bottom-0">
       <div className="flex flex-col items-center justify-center py-4">
         <span>
           <img src={Logo} width={64} />
@@ -32,7 +32,7 @@ const SideBar = ({ location }: Props) => {
           <NavLink to="/ban-hoc-triet">
             <div
               className={`${
-                location.pathname.includes("/ban-hoc-triet") &&
+                location.pathname.slice(0, 14) == "/ban-hoc-triet" &&
                 `outline outline-offset-4 outline-[#595858]`
               } p-1 border-4 border-[#595858] h-2 w-2 text-black bg-black rounded-full `}
             ></div>

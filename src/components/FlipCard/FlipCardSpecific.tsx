@@ -1,23 +1,33 @@
 import "./FlipCard.css";
 
 type Props = {
-  frontHeading: string;
+  frontHeading1: string;
+  frontHeading2: string;
   frontDescription: string;
   backHeading: string;
   backDescription: string;
+  specificText: string;
 };
 
-const FlipCard = ({
-  frontHeading,
+const FlipCardSpecific = ({
+  frontHeading1,
+  frontHeading2,
   frontDescription,
   backHeading,
   backDescription,
+  specificText,
 }: Props) => {
   return (
     <div className="container">
       <div className="card">
         <div className="front">
-          <p className="front-heading">{frontHeading}</p>
+          <p className="front-heading px-4 font-harmoni">
+            {frontHeading1}{" "}
+            <span className="text-triethoc-white">{specificText}</span>
+          </p>
+          <p className="font-harmoni text-triethoc-brown text-[28px]">
+            {frontHeading2}
+          </p>
           <p className="px-4">{frontDescription}</p>
           <div className="font-bold lg:hidden">Nhấn để xem ví dụ</div>
         </div>
@@ -30,4 +40,4 @@ const FlipCard = ({
   );
 };
 
-export default FlipCard;
+export default FlipCardSpecific;
