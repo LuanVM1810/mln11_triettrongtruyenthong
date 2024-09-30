@@ -88,9 +88,9 @@ const Quiz = () => {
                   ></div>
                 </div>
                 <div className="mt-5 text-white">
-                  Chúc mừng bạn đã vượt qua 8 câu hỏi trắc nghiệm về triết học!
-                  Một con số khá ấn tượng! Hy vọng bạn tìm thấy nhiều điều thú
-                  vị trong quá trình tìm hiểu. Cứ tiếp tục khám phá nhé!
+                  Chúc mừng bạn đã vượt qua {score} câu hỏi trắc nghiệm về triết
+                  học! Một con số khá ấn tượng! Hy vọng bạn tìm thấy nhiều điều
+                  thú vị trong quá trình tìm hiểu. Cứ tiếp tục khám phá nhé!
                 </div>
 
                 <div className="flex justify-end mt-5">
