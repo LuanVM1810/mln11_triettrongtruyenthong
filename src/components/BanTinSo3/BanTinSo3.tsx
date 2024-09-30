@@ -4,7 +4,7 @@ import FlipCard from "../FlipCard/FlipCard";
 import { motion } from "framer-motion";
 const BanTinSo3 = () => {
   return (
-    <div className="pt-20 lg:pt-[100px] overflow-x-hidden lg:overflow-hidden lg:grid lg:grid-cols-2 lg:grid-row-2 lg:space-x-20 h-screen px-4 lg:pr-[200px]  lg:pl-[250px]">
+    <div className="pt-20 lg:pt-[100px] overflow-x-hidden lg:overflow-x-xhidden lg:grid lg:grid-cols-2 lg:grid-row-2 lg:space-x-20 h-screen px-4 lg:pr-[200px]  lg:pl-[250px]">
       <div className="lg:col-span-1">
         <motion.div
           initial={{ x: -500 }} // Vị trí ban đầu bên trái ngoài màn hình
