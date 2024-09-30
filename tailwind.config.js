@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily : {
-        harmoni: ['Harmoni'],
+        harmoni: ['Lobster'],
         vietnam: ['Be Vietnam Pro']
       },
       colors: {
