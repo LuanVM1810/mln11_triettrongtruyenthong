@@ -82,11 +82,9 @@ const Quiz = () => {
                     Cấp 1
                   </div>
                 </div>
-                <div className="w-[100%] relative h-[13px] bg-triethoc-white mt-5 rounded-[20px]">
-                  <div
-                    className={`w-[${percent}] z-2 absolute bg-triethoc-brown h-[13px] rounded-[20px]`}
-                  ></div>
-                </div>
+                <div
+                  className={`w-[100%] relative h-[13px] bg-gradient-to-r from-triethoc-brown from-[${percent}] to-triethoc-white mt-5 rounded-[20px]`}
+                ></div>
                 <div className="mt-5 text-white">
                   Chúc mừng bạn đã vượt qua {score} câu hỏi trắc nghiệm về triết
                   học! Một con số khá ấn tượng! Hy vọng bạn tìm thấy nhiều điều

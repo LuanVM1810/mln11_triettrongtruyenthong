@@ -11,7 +11,7 @@ const TuDienTruyenThong = () => {
         duration: 0.5,
       }}
       style={{ backgroundImage: `url(${TuDienBackground})` }}
-      className="h-screen overflow-hidden w-[100%] px-2 pt-10 z-2 relative flex flex-col lg:flex-row lg:gap-10 items-center bg-contain lg:bg-top lg:bg-cover lg:pl-[120px] duration-500 ease-in"
+      className="h-screen overflow-hidden w-[100%] px-2 mt-10 lg:mt-0 pt-10 z-2 relative flex flex-col lg:flex-row lg:gap-10 items-center bg-contain lg:bg-top lg:bg-cover lg:pl-[120px] duration-500 ease-in"
     >
       <FlipCardSpecific
         frontHeading1="Lý thuyết"

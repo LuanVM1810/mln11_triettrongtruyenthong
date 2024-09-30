@@ -7,7 +7,7 @@ const Tudien = () => {
   return (
     <div
       style={{ backgroundImage: `url(${TuDienBackground})` }}
-      className="h-screen w-[100%] overflow-x-hidden pt-2 z-2 relative flex flex-col lg:flex-row items-center bg-contain lg:bg-top lg:bg-cover duration-500 ease-in"
+      className="h-screen w-[100%] overflow-x-hidden mt-10 lg:mt-0 z-2 relative flex flex-col lg:flex-row items-center bg-contain lg:bg-top lg:bg-cover duration-500 ease-in"
     >
       <NavLink to="truyenthong">
         <motion.div

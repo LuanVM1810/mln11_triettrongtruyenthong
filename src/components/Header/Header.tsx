@@ -93,7 +93,7 @@ const Header = ({ location }: Props) => {
               <NavLink to="/tu-dien">
                 <li
                   className={`${
-                    location.pathname === "/2" && `bg-[#D9D9D9]`
+                    location.pathname === "/tu-dien" && `bg-[#D9D9D9]`
                   } px-6 py-2 rounded-3xl`}
                 >
                   Từ điển
