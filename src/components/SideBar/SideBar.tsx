@@ -23,10 +23,10 @@ const SideBar = ({ location }: Props) => {
               } p-1 border-4 border-[#595858] h-2 w-2 text-black bg-black rounded-full `}
             ></div>
           </NavLink>
-          <NavLink to="/ban-tin-triet">
+          <NavLink to="/bantintriet">
             <div
               className={`${
-                location.pathname === "/ban-tin-triet" &&
+                location.pathname === "/bantintriet" &&
                 `outline outline-offset-4 outline-[#595858]`
               } p-1 border-4 border-[#595858] h-2 w-2 text-black bg-black rounded-full `}
             ></div>

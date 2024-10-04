@@ -10,12 +10,14 @@ import BanTinSo3 from "./components/BanTinSo3/BanTinSo3";
 import TudienPage from "./pages/TudienPage";
 import Tudien from "./components/Tudien/Tudien";
 import TuDienTruyenThong from "./components/TuDienTruyenThong/TuDienTruyenThong";
+import NewBanTinTriet from "./pages/NewBanTinTriet";
 
 export default function App() {
   return (
     <div className="h-screen ">
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="bantintriet" element={<NewBanTinTriet />} />
         <Route path="ban-tin-triet" element={<BanTinTrietLayout />}>
           <Route index element={<News />} />
           <Route path="1" element={<BanTinSo1 />} />
