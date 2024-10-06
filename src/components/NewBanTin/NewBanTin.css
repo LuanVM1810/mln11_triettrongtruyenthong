@@ -24,18 +24,18 @@
 }
 
 .slider .list .item{
-    width: 1000px;
+    width: 500px;
     height: 300px;
     position: absolute;
     left: 100%;
-    animation: autoRun 12s linear infinite;
+    animation: autoRun 9s linear infinite;
     transition: filter 0.5s;
     cursor: pointer;
 }
 
 .slider .list img {
 
-    width: 50%;
+    width: 100%;
 }
 
 @keyframes autoRun{

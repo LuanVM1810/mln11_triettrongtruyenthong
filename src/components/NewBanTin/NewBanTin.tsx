@@ -81,14 +81,14 @@ const NewBanTin = () => {
             <div
               className="item"
               onClick={() => setImg(2)}
-              style={{ animationDelay: "4s" }}
+              style={{ animationDelay: "3s" }}
             >
               <img src={Item2} alt="" />
             </div>
             <div
               onClick={() => setImg(3)}
               className="item"
-              style={{ animationDelay: "8s" }}
+              style={{ animationDelay: "6s" }}
             >
               <img src={Item3} alt="" />
             </div>
