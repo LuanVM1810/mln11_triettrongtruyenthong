@@ -49,7 +49,7 @@ const Slogan = () => {
         >
           <button
             onClick={() => {
-              navigate("/ban-tin-triet");
+              navigate("/bantintriet");
             }}
             className="w-full lg:w-[50%] px-6 py-2 mt-[30px] text-white rounded-3xl lg:mt-[50px] bg-[#546D68] text-center"
           >
